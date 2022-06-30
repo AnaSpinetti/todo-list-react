@@ -4,9 +4,24 @@ import doneImg from '../../images/done.svg'
 import trash from '../../images/trash.svg'
 import { useState, useEffect } from 'react'
 
-
-export function Tarefa({content, status} : any){
+export function Tarefa({content, status, id, tarefas} : any){
     const [imagem, setimagem] = useState(toDo)
+
+    function handleToggleTask(){
+        if(imagem == toDo){
+            setimagem(doneImg)
+        }else{
+            setimagem(toDo)
+        }
+    }
+
+    const handleDeleteTask = (id: number) =>{
+        // const taskList = tarefas.filter(task => task.id !== id);
+        // setTasks(taskList);
+
+        console.log(tarefas)
+    }
+
 
     useEffect(() => {
         if(status == true){
@@ -15,15 +30,14 @@ export function Tarefa({content, status} : any){
     }, [])
     
 
-
     return(
         <div className={style.tarefaContainer}>
             <div className={style.conteudo}>
-                <img src={imagem} alt='status da tarefa'  />
+                <img onClick={handleToggleTask} src={imagem} alt='status da tarefa'  />
                 <p>{content}</p>
             </div>
             <div className={style.trash}>
-                <img src={trash} alt='excluir tarefa' />
+                <img onClick={() => handleDeleteTask(id)} src={trash} alt='excluir tarefa' />
             </div>
         </div>
     )
