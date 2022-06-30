@@ -1,0 +1,66 @@
+.containerInput{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 54px;
+    margin-top: -30px;
+}
+
+.containerInput input{
+    width: 80%;
+    max-width: 600px;
+    padding: 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #454545;
+}
+
+.buttonAdicionar{
+
+    cursor: pointer;
+    width: 90px;
+    height: 52px;
+    background: #1E6F9F;
+    border-radius: 8px;
+}
+
+.containerTarefas{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    justify-content: center;
+    position: absolute;
+    width: 800px;
+    height: 287px;
+    left: calc(50% - 800px/2);
+    top: 291px;
+}
+
+.containerTarefas header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerTarefas section{
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    color: rgb(95, 94, 94);
+}
+
+.tarefasCriadasContador{
+    color: rgb(80, 80, 222);
+}
+
+.tarefasConcluidasContador{
+    color: violet;
+}
