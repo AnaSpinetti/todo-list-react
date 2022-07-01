@@ -64,3 +64,32 @@
 .tarefasConcluidasContador{
     color: violet;
 }
+
+
+.tarefaContainer{
+    max-width: 100%;
+    width: 400px;
+    background-color: #262626;
+    border-radius: 2px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    border: solid 1px #333;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.tarefaContainer .conteudo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.trash{    
+    display: flex;
+    justify-content: right;
+}
+
+.textoTarefaDone{
+    text-decoration: line-through;
+}
