@@ -78,7 +78,7 @@ export function ListaTarefas({}) {
 
           <div className={style.tarefasConcluidasContador}>
             <p>Concluídas</p>
-            <span> {feitas.length} de 0</span>
+            <span> {feitas.length} de {tarefas.length}</span>
           </div>
         </header>
         <section>
